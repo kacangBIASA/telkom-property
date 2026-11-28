@@ -1,9 +1,33 @@
 @import 'tailwindcss';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --color-tel: #E30613;
+    --color-tel-dark: #B8040F;
+    --color-ink: #2C2F38;
+    --color-mist: #EBD6D3;
+    --color-line: #EADCDB;
+    --color-blush: #FBF5F5;
+}
+
+@layer base {
+    body { @apply antialiased; }
+}
+
+@layer components {
+    .card { @apply rounded-2xl border border-line bg-white p-6 shadow-[0_6px_20px_rgba(44,47,56,0.07)]; }
+    .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg bg-tel px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-tel-dark focus:outline-none focus:ring-2 focus:ring-tel/30 disabled:cursor-not-allowed disabled:opacity-40; }
+    .btn-o { @apply inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-ink transition hover:border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200; }
+    .inp { @apply w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm transition placeholder:text-gray-400 focus:border-tel focus:outline-none focus:ring-2 focus:ring-tel/15; }
+    .tbl { @apply w-full text-left text-sm; }
+    .tbl th { @apply px-4 py-3 text-xs font-semibold uppercase tracking-wide text-gray-500 bg-blush first:rounded-l-lg last:rounded-r-lg; }
+    .tbl td { @apply px-4 py-3 border-t border-line align-middle; }
+    .tbl tr:hover td { @apply bg-blush/70; }
+    .badge { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium; }
+    .err { @apply mt-1 text-xs text-tel; }
+    .wrap { @apply mx-auto w-full max-w-6xl px-6; }
+    .panel { @apply rounded-2xl border border-line bg-white shadow-[0_6px_20px_rgba(44,47,56,0.07)]; }
+    .eyebrow { @apply text-xs font-semibold uppercase tracking-widest text-tel; }
 }

@@ -1,0 +1,50 @@
+<?php
+
+// Pesan validasi bahasa Indonesia; hanya aturan yang dipakai aplikasi ini.
+return [
+    'required' => ':attribute wajib diisi.',
+    'string' => ':attribute harus berupa teks.',
+    'integer' => ':attribute harus berupa bilangan bulat.',
+    'numeric' => ':attribute harus berupa angka.',
+    'in' => ':attribute tidak valid.',
+    'exists' => ':attribute yang dipilih tidak valid.',
+    'unique' => ':attribute sudah digunakan.',
+    'confirmed' => 'Konfirmasi :attribute tidak cocok.',
+    'image' => ':attribute harus berupa gambar.',
+    'uploaded' => ':attribute gagal diunggah.',
+    'min' => [
+        'numeric' => ':attribute minimal :min.',
+        'string' => ':attribute minimal :min karakter.',
+    ],
+    'max' => [
+        'numeric' => ':attribute maksimal :max.',
+        'file' => ':attribute maksimal :max KB.',
+        'string' => ':attribute maksimal :max karakter.',
+    ],
+    'gt' => [
+        'numeric' => ':attribute harus lebih besar dari :value.',
+    ],
+    'attributes' => [
+        'wilayah_id' => 'Wilayah',
+        'kode_aset' => 'Kode aset',
+        'nama_aset' => 'Nama aset',
+        'jenis' => 'Jenis',
+        'alamat' => 'Alamat',
+        'luas_tanah' => 'Luas tanah',
+        'luas_gedung' => 'Luas gedung',
+        'space_idle_gedung' => 'Space idle gedung',
+        'luas_lahan_idle' => 'Luas lahan idle',
+        'lebar_jalan' => 'Lebar jalan',
+        'status_utilisasi' => 'Status utilisasi',
+        'potensi_pengembangan' => 'Potensi pengembangan',
+        'nama_wilayah' => 'Nama wilayah',
+        'kabupaten' => 'Kabupaten',
+        'judul' => 'Judul',
+        'tipe' => 'Tipe',
+        'name' => 'Nama',
+        'username' => 'Username',
+        'password' => 'Password',
+        'password_lama' => 'Password lama',
+        'gambar.*' => 'Foto',
+    ],
+];
